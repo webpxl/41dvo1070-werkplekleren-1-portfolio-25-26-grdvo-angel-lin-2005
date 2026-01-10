@@ -2,12 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Title </title>
-    <!-- Bootstrap CSS -->
-    <link  rel= "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angel Lin - Portfolio</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="asset/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 <body>
-<p>Angel Lin</p>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Angel Lin</h1>
+                <p class="hero-subtitle">Werkplekleren Portfolio 2025-2026</p>
+                <div class="hero-decoration"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="container">
+        <section class="portfolio-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="bi bi-folder2-open"></i>
+                    Mijn Portfolio
+                </h2>
+                <p class="section-description">Bekijk en download mijn werkplekleren documenten</p>
+            </div>
+
+            <div class="row g-5">
+                <!-- Document Card 1 -->
+                <div class="col-md-6 mb-4">
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="bi bi-file-earmark-word-fill"></i>
+                        </div>
+                        <div class="document-content">
+                            <h3 class="document-title">DVO OLR</h3>
+                            <p class="document-description">Ontwikkelingsplan</p>
+                            <a href="portfolio/DVO OLR.docx" class="btn-download" download>
+                                <i class="bi bi-download"></i>
+                                Download Document
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Card 2 -->
+                <div class="col-md-6 mb-4">
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="bi bi-file-earmark-word-fill"></i>
+                        </div>
+                        <div class="document-content">
+                            <h3 class="document-title">Eindreflectie WPL1 DVO</h3>
+                            <p class="document-description">Reflectie document</p>
+                            <a href="portfolio/Eindreflectie WPL1 DVO.docx" class="btn-download" download>
+                                <i class="bi bi-download"></i>
+                                Download Document
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Angel Lin - Werkplekleren Portfolio</p>
+        </div>
+    </footer>
+
 </body>
 </html>
