@@ -4,6 +4,85 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Top Navigation */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 12px 0;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-profile {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+
+.nav-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: #f8d7ff;
+    transform: translateY(-1px);
+}
+
 body {
     font-family: 'Poppins', Arial, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -16,7 +95,7 @@ body {
 /* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    padding: 80px 0;
+    padding: 30px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -39,6 +118,17 @@ body {
     position: relative;
     z-index: 1;
     animation: fadeInDown 1s ease-out;
+}
+
+.hero-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    margin: 0 auto 20px;
+    display: block;
 }
 
 .hero-title {
@@ -191,6 +281,84 @@ body {
     margin-right: 8px;
 }
 
+/* Profile Menu */
+.nav-profile {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.profile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.profile-toggle:hover,
+.profile-toggle:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    outline: none;
+    transform: translateY(-1px);
+}
+
+.profile-toggle i {
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.profile-toggle[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+.profile-menu {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    min-width: 180px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.profile-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.profile-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.profile-menu a:hover,
+.profile-menu a:focus {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f8d7ff;
+}
+
 /* Footer */
 .footer {
     background: rgba(0, 0, 0, 0.3);
@@ -210,6 +378,27 @@ body {
 .row.g-5 {
     row-gap: 2.5rem;   /* vertical spacing between rows */
     column-gap: 2rem;  /* horizontal spacing between columns */
+}
+
+/* Intro Section */
+.intro-section {
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.intro-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px 28px;
+    max-width: 780px;
+    margin: 0 auto;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.intro-text {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.8;
 }
 
 /* Animations */
