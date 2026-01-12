@@ -749,6 +749,10 @@ body {
     transition: all 0.4s ease;
 }
 
+.waardebonnen-container .project-banner {
+    max-width: 260px;
+}
+
 .project-banner:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
@@ -763,20 +767,50 @@ body {
 }
 
 .project-description {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
 }
 
 .project-description p {
     background: rgba(255, 255, 255, 0.95);
-    padding: 16px 24px;
+    padding: 24px 32px;
     border-radius: 12px;
     color: #444;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.8;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 12px auto;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Waardebonnen Container */
+.waardebonnen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Projects Wrapper - Side by side layout */
+.projects-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 /* Animations */
@@ -818,5 +852,20 @@ body {
 
     .document-card {
         margin-bottom: 48px; /* even more space on mobile */
+    }
+
+    .waardebonnen-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projects-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-item {
+        min-width: 100%;
+        max-width: 100%;
     }
 }
