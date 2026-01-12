@@ -24,23 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (toggleBtn) {
         let isShowing = false;
         const hiddenImages = document.querySelectorAll('.project-image-item.school-project');
-
+        
         toggleBtn.addEventListener('click', () => {
             isShowing = !isShowing;
-
+            
             hiddenImages.forEach((item, index) => {
                 if (index === 0) {
                     // First image is always visible
                     return;
                 }
-
+                
                 if (isShowing) {
                     item.style.display = 'block';
                 } else {
                     item.style.display = 'none';
                 }
             });
-
+            
             // Update button text and icon
             const icon = toggleBtn.querySelector('i');
             if (isShowing) {
