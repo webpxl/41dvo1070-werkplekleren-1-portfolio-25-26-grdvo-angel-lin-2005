@@ -23,7 +23,10 @@
                 <i class="bi bi-caret-down-fill"></i>
             </button>
             <div class="profile-menu" role="menu">
+                <a href="#intro" role="menuitem">Introductie</a>
                 <a href="#portfolio" role="menuitem">Portfolio</a>
+                <a href="#school-project" role="menuitem">School Project</a>
+                <a href="#niet-school-project" role="menuitem">Niet-school Project</a>
                 <a href="#footer" role="menuitem">Footer</a>
             </div>
         </div>
@@ -56,7 +59,9 @@
             <p class="intro-text">
                 Ik ben leergierig en sta altijd open voor nieuwe uitdagingen. Ik werk zowel goed zelfstandig als in
                 teamverband en durf hulp te vragen wanneer dat nodig is. Daarnaast beschik ik over basisvaardigheden in
-                ICT en ben ik bereid deze verder te ontwikkelen.
+                ICT en ben ik bereid deze verder te ontwikkelen. Ik koos dit opleiding omdat het mij erg intresseert hoe
+                ik voor andere mensen een website kon maken of een logo/poster voor anderen kan maken, waardoor ik niet
+                weet of ik designer of web developper wil worden.
             </p>
         </div>
     </section>
@@ -107,6 +112,91 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+</div>
+
+<!-- School Project Section -->
+<div class="container">
+    <section class="school-project-section" id="school-project">
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="bi bi-code-square"></i>
+                School Project
+            </h2>
+        </div>
+        <div class="school-project-card">
+            <div class="school-project-content">
+                <div class="project-icon">
+                    <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="project-title">Scripting Project</h3>
+                <p class="project-detail">Voor het vak Scripting kreeg ik de opdracht om een website te ontwikkelen
+                    voor een restaurantmenu. Mijn rol binnen dit project was  coderen van een website
+                    en het ontwerpen van een aantrekkelijke en overzichtelijke lay-out. Vervolgens presenteerde
+                    ik mijn code aan de leerkracht en deelde ik het project via GitHub, zodat alles transparant gevolgd
+                    en nagekeken kon worden. ik heb de app webstorm gebruikt om dit website te maken met javascript als hoofddoel,
+                    vervolgens heb ik ook HTML en CSS gebruikt om de website vorm te geven.
+                </p>
+                
+                <!-- Toggle button voor school/niet-school projecten -->
+                <div class="project-toggle-section">
+                    <button id="toggleProjectBtn" class="btn-toggle-project">
+                        <i class="bi bi-eye"></i>
+                        Toon Alle Afbeeldingen
+                    </button>
+                </div>
+
+                <!-- Project screenshots -->
+                <div class="project-images-grid">
+                    <div class="project-image-item school-project">
+                        <div class="project-image-container">
+                            <img src="scripting/scripting_opdracht.png" alt="Scripting Project - Hoofdpagina" class="project-image">
+                        </div>
+                        <p class="image-caption"><strong>Hoofdpagina:</strong> De basis layout van het restaurantmenu met navigatie en menustructuur.</p>
+                    </div>
+                    
+                    <div class="project-image-item school-project" style="display: none;">
+                        <div class="project-image-container">
+                            <img src="scripting/buttons toegevoegd.png" alt="Scripting Project - Buttons toegevoegd" class="project-image">
+                        </div>
+                        <p class="image-caption"><strong>Stap 1:</strong> Hier zijn interactieve buttons toegevoegd aan de menuitems, waardoor gebruikers items kunnen selecteren en toevoegen aan hun bestelling.</p>
+                    </div>
+                    
+                    <div class="project-image-item school-project" style="display: none;">
+                        <div class="project-image-container">
+                            <img src="scripting/winkelmand_toegevoegd.png" alt="Scripting Project - Winkelmand toegevoegd" class="project-image">
+                        </div>
+                        <p class="image-caption"><strong>Stap 2:</strong> Een volledig werkende winkelmand is geïmplementeerd, waar geselecteerde items worden verzameld met prijzen en totaalbedrag - dit toont de Javascript functionaliteit.</p>
+                    </div>
+
+                    <div class="project-image-item school-project" style="display: none;">
+                        <div class="project-image-container">
+                            <img src="scripting/eindresultaat website.png" alt="Scripting Project - Eindresultaat Website" class="project-image">
+                        </div>
+                        <p class="image-caption"><strong>Eindresultaat:</strong> Dit is de volledige, werkende website van de scripting opdracht met alle functionaliteiten geïntegreerd. Een volledig functioneel restaurantmenu met interactieve elementen, winkelmandfunctionaliteit en een professionele gebruikersinterface - het bewijs van mijn Javascript, HTML en CSS vaardigheden!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Niet-school Project Section -->
+<div class="container">
+    <section class="project-section" id="niet-school-project">
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="bi bi-image"></i>
+                Niet-school Project
+            </h2>
+            <p class="section-description">Mijn persoonlijke project</p>
+        </div>
+        <div class="project-banner">
+            <img alt="Project banner" class="banner-image" src="asset/banner.png">
+        </div>
+        <div class="project-description">
+            <p>Het is een vlag voor een frituur ontwerpt aan de hand van photoshop app in mijn vrije tijd</p>
         </div>
     </section>
 </div>
