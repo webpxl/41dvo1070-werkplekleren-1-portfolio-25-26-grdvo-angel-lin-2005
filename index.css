@@ -283,7 +283,7 @@ body::before {
 }
 
 .section-title i {
-    color: #f093fb;
+    color: papayawhip;
     margin-right: 15px;
     filter: drop-shadow(0 0 8px rgba(240, 147, 251, 0.4));
 }
@@ -1063,13 +1063,13 @@ body::before {
 
 /* Hobbies Section */
 .hobbies-section {
-    padding: 60px 0 40px;
+    padding: 30px 0 40px;
     animation: fadeInUp 1s ease-out;
 }
 
 .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
@@ -1077,7 +1077,7 @@ body::before {
 .hobby-card {
     background: linear-gradient(135deg, #ffffff 0%, #fafaff 100%);
     border-radius: 20px;
-    padding: 35px 30px;
+    padding: 0 72px;
     box-shadow:
         0 12px 40px rgba(0, 0, 0, 0.13),
         0 0 25px rgba(102, 126, 234, 0.05);
@@ -1086,6 +1086,7 @@ body::before {
     position: relative;
     overflow: hidden;
     height: 100%;
+    width: 529px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1111,8 +1112,8 @@ body::before {
     position: absolute;
     top: 0;
     left: -100%;
-    width: 100%;
-    height: 100%;
+    width: 10%;
+    height: 10%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: left 0.5s ease;
     z-index: 1;
@@ -1294,7 +1295,7 @@ body::before {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 740px) {
     .hobbies-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1400,6 +1401,4 @@ body::before {
         transform: translateY(-10px);
     }
 }
-
-
 
