@@ -1,53 +1,77 @@
-// Main JavaScript file for portfolio
-
 document.addEventListener('DOMContentLoaded', () => {
+    initializeProfileMenu();
+    initializeProjectToggle();
+});
+
+function initializeProfileMenu() {
     const toggle = document.querySelector('.profile-toggle');
     const menu = document.querySelector('.profile-menu');
 
-    if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-            const expanded = toggle.getAttribute('aria-expanded') === 'true';
-            toggle.setAttribute('aria-expanded', String(!expanded));
-            menu.classList.toggle('show');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!menu.contains(e.target) && !toggle.contains(e.target)) {
-                toggle.setAttribute('aria-expanded', 'false');
-                menu.classList.remove('show');
-            }
-        });
+    if (!toggle || !menu) {
+        console.warn('Profile menu elements not found');
+        return;
     }
 
-    // Toggle project images visibility
+    toggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+        menu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (event) => {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickOnToggle = toggle.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnToggle) {
+            toggle.setAttribute('aria-expanded', 'false');
+            menu.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menu.classList.contains('show')) {
+            toggle.setAttribute('aria-expanded', 'false');
+            menu.classList.remove('show');
+            toggle.focus();
+        }
+    });
+}
+
+function initializeProjectToggle() {
     const toggleBtn = document.getElementById('toggleProjectBtn');
-    if (toggleBtn) {
-        let isShowing = false;
-        const hiddenImages = document.querySelectorAll('.project-image-item.school-project');
-        
-        toggleBtn.addEventListener('click', () => {
-            isShowing = !isShowing;
-            
-            hiddenImages.forEach((item, index) => {
-                if (index === 0) {
-                    // First image is always visible
-                    return;
-                }
-                
-                if (isShowing) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-            
-            // Update button text and icon
-            const icon = toggleBtn.querySelector('i');
-            if (isShowing) {
-                toggleBtn.innerHTML = '<i class="bi bi-eye-slash"></i> Verberg Extra Afbeeldingen';
-            } else {
-                toggleBtn.innerHTML = '<i class="bi bi-eye"></i> Toon Alle Afbeeldingen';
-            }
-        });
+
+    if (!toggleBtn) {
+        console.warn('Toggle project button not found');
+        return;
     }
-});
+
+    let isShowing = false;
+    const projectImages = document.querySelectorAll('.project-image-item.school-project');
+
+    if (projectImages.length === 0) {
+        console.warn('No project images found');
+        return;
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        isShowing = !isShowing;
+
+        projectImages.forEach((item, index) => {
+            if (index === 0) {
+                return;
+            }
+
+            item.style.display = isShowing ? 'block' : 'none';
+        });
+
+        updateToggleButton(toggleBtn, isShowing);
+    });
+}
+
+function updateToggleButton(button, isShowing) {
+    const icon = isShowing ? 'bi-eye-slash' : 'bi-eye';
+    const text = isShowing ? 'Verberg Extra Afbeeldingen' : 'Toon Alle Afbeeldingen';
+
+    button.innerHTML = `<i class="bi ${icon}"></i> ${text}`;
+}
