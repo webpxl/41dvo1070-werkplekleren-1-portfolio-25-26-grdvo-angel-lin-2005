@@ -11,6 +11,7 @@
     <script src="index.js" defer></script>
 </head>
 <body>
+<!-- HEADER: Navigatie -->
 <header class="site-nav">
     <div class="container nav-inner">
         <div class="nav-profile">
@@ -21,7 +22,7 @@
             <button aria-expanded="false" aria-haspopup="true" aria-label="Open profiel menu" class="profile-toggle">
                 <i class="bi bi-caret-down-fill"></i>
             </button>
-            <div class="profile-menu" role="menu">
+            <nav class="profile-menu" role="menu">
                 <a href="Index.html#intro" role="menuitem">Introductie</a>
                 <a href="portfolio.html" role="menuitem">Portfolio</a>
                 <a href="Index.html#school-project" role="menuitem">School Project</a>
@@ -29,67 +30,85 @@
                 <a href="Index.html#hobbies" role="menuitem">Hobbies</a>
                 <a href="Index.html#gallery" role="menuitem">Fotogalerij</a>
                 <a href="Index.html#footer" role="menuitem">Footer</a>
-            </div>
+            </nav>
         </div>
     </div>
 </header>
 
-<div class="container">
+<!-- MAIN: Hoofd content van de pagina -->
+<main>
+    <!-- Portfolio Section -->
     <section class="portfolio-section" id="portfolio">
-        <div class="section-header">
-            <h2 class="section-title">
-                <i class="bi bi-folder2-open"></i>
-                Mijn Portfolio
-            </h2>
-            <p class="section-description">Bekijk en download mijn werkplekleren documenten</p>
-        </div>
-
-        <div class="row g-5">
-            <div class="col-md-6 mb-4">
-                <div class="document-card">
-                    <div class="document-icon">
-                        <i class="bi bi-file-earmark-word-fill"></i>
-                    </div>
-                    <div class="document-content">
-                        <h3 class="document-title">DVO OLR</h3>
-                        <p class="document-description">Ontwikkelingsplan</p>
-                        <div class="btn-group">
-                            <a class="btn-download" download href="portfolio/DVO OLR.docx">
-                                <i class="bi bi-download"></i>
-                                Word
-                            </a>
-                            <a class="btn-download" href="portfolio/DVO OLR_PDF.pdf" target="_blank">
-                                <i class="bi bi-eye"></i>
-                                PDF
-                            </a>
-                            <a class="btn-download" download href="portfolio/DVO OLR_PDF.pdf">
-                                <i class="bi bi-download"></i>
-                                PDF DL
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="bi bi-folder2-open"></i>
+                    Mijn Portfolio
+                </h2>
+                <p class="section-description">Bekijk en download mijn werkplekleren documenten</p>
             </div>
 
-            <div class="col-md-6 mb-4">
-                <div class="document-card">
-                    <div class="document-icon">
-                        <i class="bi bi-file-earmark-word-fill"></i>
-                    </div>
-                    <div class="document-content">
-                        <h3 class="document-title">Eindreflectie WPL1 DVO</h3>
-                        <p class="document-description">Reflectie document</p>
-                        <a class="btn-download" download href="portfolio/Eindreflectie WPL1 DVO.docx">
-                            <i class="bi bi-download"></i>
-                            Download Document
-                        </a>
-                    </div>
+            <div class="row g-5">
+                <div class="col-md-6 mb-4">
+                    <article class="document-card">
+                        <div class="document-icon">
+                            <i class="bi bi-file-earmark-word-fill"></i>
+                        </div>
+                        <div class="document-content">
+                            <h3 class="document-title">DVO OLR</h3>
+                            <p class="document-description">Ontwikkelingsplan</p>
+                            <div class="btn-group">
+                                <a class="btn-download" download href="portfolio/DVO OLR.docx">
+                                    <i class="bi bi-download"></i>
+                                    Word
+                                </a>
+                                <a class="btn-download" href="portfolio/DVO OLR_PDF.pdf" target="_blank">
+                                    <i class="bi bi-eye"></i>
+                                    PDF
+                                </a>
+                                <a class="btn-download" download href="portfolio/DVO OLR_PDF.pdf">
+                                    <i class="bi bi-download"></i>
+                                    PDF DL
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <article class="document-card">
+                        <div class="document-icon">
+                            <i class="bi bi-file-earmark-word-fill"></i>
+                        </div>
+                        <div class="document-content">
+                            <h3 class="document-title">Eindreflectie WPL1 DVO</h3>
+                            <p class="document-description">Reflectie document</p>
+                            <div class="btn-group">
+                                <a class="btn-download" download href="portfolio/Eindreflectie WPL1 DVO.docx">
+                                    <i class="bi bi-download"></i>
+                                    Word
+                                </a>
+                                <a class="btn-download" href="portfolio/Eindreflectie WPL1 DVO.pdf" target="_blank">
+                                    <i class="bi bi-eye"></i>
+                                    PDF
+                                </a>
+                                <a class="btn-download" download href="portfolio/Eindreflectie WPL1 DVO.pdf">
+                                    <i class="bi bi-download"></i>
+                                    PDF DL
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
-</div>
+    <!-- Einde Portfolio Section -->
 
+</main>
+<!-- EINDE MAIN -->
+
+<!-- FOOTER: Contact informatie en copyright -->
 <footer class="footer" id="footer">
     <div class="container footer-content">
         <div class="footer-left">

@@ -25,19 +25,22 @@
             </button>
             <div class="profile-menu" role="menu">
                 <a href="#intro" role="menuitem">Introductie</a>
-                <a href="portfolio.html" role="menuitem">Portfolio</a>
                 <a href="#school-project" role="menuitem">School Project</a>
                 <a href="#niet-school-project" role="menuitem">Niet-school Project</a>
                 <a href="#hobbies" role="menuitem">Hobbies</a>
                 <a href="#gallery" role="menuitem">Fotogalerij</a>
+                <a href="#portfolio" role="menuitem">Portfolio</a>
                 <a href="#footer" role="menuitem">Footer</a>
             </div>
         </div>
     </div>
 </header>
 
-<div class="hero-section" id="hero">
-    <div class="container">
+<!-- MAIN: Hoofd content van de pagina -->
+<main>
+    <!-- Hero Section: Welkomstbanner -->
+    <section class="hero-section" id="hero">
+        <div class="container">
         <div class="hero-content">
             <div class="hero-profile">
                 <img alt="Profiel foto van Angel Lin - Digitale Vormgever" class="hero-avatar" src="asset/foto_mijzelf.jpg">
@@ -48,41 +51,44 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="container">
-    <section class="intro-section" id="intro">
-        <div class="section-header">
-            <h2 class="section-title">
-                <i class="bi bi-person-circle"></i>
-                Introductie
-            </h2>
-            <p class="section-description">Leer mij kort kennen</p>
-        </div>
-        <div class="intro-card">
-            <p class="intro-text">
-                Ik ben leergierig en sta altijd open voor nieuwe uitdagingen. Ik werk zowel goed zelfstandig als in
-                teamverband en durf hulp te vragen wanneer dat nodig is. Daarnaast beschik ik over basisvaardigheden in
-                ICT en ben ik bereid deze verder te ontwikkelen. Ik koos deze opleiding omdat het mij erg interesseert hoe
-                ik voor andere mensen een website kan maken of een logo/poster kan ontwerpen. Hierdoor weet ik nog niet
-                of ik designer of web developer wil worden.
-            </p>
         </div>
     </section>
-</div>
+    <!-- Einde Hero Section -->
 
-
-<div class="container">
-    <section class="school-project-section" id="school-project">
-        <div class="section-header">
-            <h2 class="section-title">
-                <i class="bi bi-code-square"></i>
-                School Project
-            </h2>
+    <!-- Introductie Section -->
+    <section class="intro-section" id="intro">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="bi bi-person-circle"></i>
+                    Introductie
+                </h2>
+                <p class="section-description">Leer mij kort kennen</p>
+            </div>
+            <article class="intro-card">
+                <p class="intro-text">
+                    Ik ben leergierig en sta altijd open voor nieuwe uitdagingen. Ik werk zowel goed zelfstandig als in
+                    teamverband en durf hulp te vragen wanneer dat nodig is. Daarnaast beschik ik over basisvaardigheden in
+                    ICT en ben ik bereid deze verder te ontwikkelen. Ik koos deze opleiding omdat het mij erg interesseert hoe
+                    ik voor andere mensen een website kan maken of een logo/poster kan ontwerpen. Hierdoor weet ik nog niet
+                    of ik designer of web developer wil worden.
+                </p>
+            </article>
         </div>
-        <div class="school-project-card">
-            <div class="school-project-content">
+    </section>
+    <!-- Einde Introductie Section -->
+
+    <!-- School Project Section -->
+    <section class="school-project-section" id="school-project">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="bi bi-code-square"></i>
+                    School Project
+                </h2>
+            </div>
+            <article class="school-project-card">
+                <div class="school-project-content">
                 <div class="project-icon">
                     <i class="bi bi-laptop"></i>
                 </div>
@@ -146,61 +152,65 @@
                     </div>
                 </div>
             </div>
+        </article>
         </div>
     </section>
-</div>
+    <!-- Einde School Project Section -->
 
-<div class="container">
+    <!-- Niet-school Project Section -->
     <section class="project-section" id="niet-school-project">
-        <div class="section-header">
-            <h2 class="section-title">
-                <i class="bi bi-image"></i>
-                Niet-school Project
-            </h2>
-            <p class="section-description">Mijn persoonlijke project</p>
-        </div>
-        <div class="projects-wrapper">
-            <div class="project-item">
-                <div class="project-banner">
-                    <img alt="Vlag ontwerp voor frituur - persoonlijk project" class="banner-image" src="asset/banner.png">
-                </div>
-                <div class="project-description">
-                    <p><strong>Vlag Ontwerp</strong></p>
-                    <p>Een vlag voor een frituur ontworpen aan de hand van Photoshop in mijn vrije tijd.</p>
-                </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="bi bi-image"></i>
+                    Niet-school Project
+                </h2>
+                <p class="section-description">Mijn persoonlijke project</p>
             </div>
+            <div class="projects-wrapper">
+                <article class="project-item">
+                    <div class="project-banner">
+                        <img alt="Vlag ontwerp voor frituur - persoonlijk project" class="banner-image" src="asset/banner.png">
+                    </div>
+                    <div class="project-description">
+                        <p><strong>Vlag Ontwerp</strong></p>
+                        <p>Een vlag voor een frituur ontworpen aan de hand van Photoshop in mijn vrije tijd.</p>
+                    </div>
+                </article>
 
-            <div class="project-item">
-                <div class="waardebonnen-container">
-                    <div class="project-banner">
-                        <img alt="Waardebon voorkant - Illustrator design" class="banner-image" src="asset/waardebon-voorkant.png">
+                <article class="project-item">
+                    <div class="waardebonnen-container">
+                        <div class="project-banner">
+                            <img alt="Waardebon voorkant - Illustrator design" class="banner-image" src="asset/waardebon-voorkant.png">
+                        </div>
+                        <div class="project-banner">
+                            <img alt="Waardebon achterkant - Illustrator design met gradiënt effect" class="banner-image" src="asset/waardebon-achterkant.png">
+                        </div>
                     </div>
-                    <div class="project-banner">
-                        <img alt="Waardebon achterkant - Illustrator design met gradiënt effect" class="banner-image" src="asset/waardebon-achterkant.png">
+                    <div class="project-description">
+                        <p><strong>Waardebon Ontwerp</strong></p>
+                        <p>Een waardebon ontworpen in Illustrator met een gradiënt effect op de achterkant van
+                            de waardebon kaart.</p>
                     </div>
-                </div>
-                <div class="project-description">
-                    <p><strong>Waardebon Ontwerp</strong></p>
-                    <p>Een waardebon ontworpen in Illustrator met een gradiënt effect op de achterkant van
-                        de waardebon kaart.</p>
-                </div>
+                </article>
             </div>
         </div>
     </section>
-</div>
+    <!-- Einde Niet-school Project Section -->
 
-<div class="container">
+    <!-- Hobbies Section -->
     <section class="hobbies-section" id="hobbies">
-        <div class="section-header">
-            <h2 class="section-title">
-                <i class="bi bi-star-fill"></i>
-                Mijn Hobbies
-            </h2>
-            <p class="section-description">Wat ik graag doe in mijn vrije tijd</p>
-        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="bi bi-star-fill"></i>
+                    Mijn Hobbies
+                </h2>
+                <p class="section-description">Wat ik graag doe in mijn vrije tijd</p>
+            </div>
 
-        <div class="hobbies-grid">
-            <div class="hobby-card">
+            <div class="hobbies-grid">
+                <article class="hobby-card">
                 <div class="hobby-icon">
                     <i class="bi bi-music-note-beamed"></i>
                 </div>
@@ -214,13 +224,15 @@
                 <a href="https://wesingapp.com/user/609c95802c2d34883d4c/song/ssWKQHa8dy--vavA-?from=portal" target="_blank" class="music-link">
                     <i class="bi bi-play-circle-fill"></i> Luister naar mijn muziek
                 </a>
-            </div>
+            </article>
+        </div>
         </div>
     </section>
-</div>
+<!-- Einde Hobbies Section -->
 
-<div class="container">
-    <section class="gallery-section" id="gallery">
+<!-- Fotogalerij Section -->
+<section class="gallery-section" id="gallery">
+    <div class="container">
         <div class="section-header">
             <h2 class="section-title">
                 <i class="bi bi-camera-fill"></i>
@@ -303,32 +315,38 @@
             <div class="lightbox-counter">
                 <span class="lightbox-current">1</span>
                 <span>/</span>
-                <span class="lightbox-total">5</span>
+                </div>
             </div>
         </div>
     </section>
-</div>
+    <!-- Einde Fotogalerij Section -->
 
-<div class="container">
+    <!-- Portfolio Section -->
     <section class="portfolio-section" id="portfolio">
-        <div class="section-header">
-            <h2 class="section-title">
-                <i class="bi bi-folder2-open"></i>
-                Mijn Portfolio
-            </h2>
-            <p class="section-description">Bekijk en download mijn werkplekleren documenten</p>
-        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="bi bi-folder2-open"></i>
+                    Mijn Portfolio
+                </h2>
+                <p class="section-description">Bekijk en download mijn werkplekleren documenten</p>
+            </div>
 
-        <div class="intro-card">
-            <p class="intro-text">Mijn portfolio staat nu op een aparte pagina. Klik op de knop hieronder om hem te openen.</p>
-            <a class="btn-download" href="portfolio.html">
-                <i class="bi bi-box-arrow-up-right"></i>
-                Open portfolio pagina
-            </a>
+            <article class="intro-card">
+                <p class="intro-text">Mijn portfolio staat nu op een aparte pagina. Klik op de knop hieronder om hem te openen.</p>
+                <a class="btn-download" href="portfolio.html">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                    Open portfolio pagina
+                </a>
+            </article>
         </div>
     </section>
-</div>
+    <!-- Einde Portfolio Section -->
 
+</main>
+<!-- EINDE MAIN -->
+
+<!-- FOOTER: Contact informatie en copyright -->
 <footer class="footer" id="footer">
     <div class="container footer-content">
         <div class="footer-left">

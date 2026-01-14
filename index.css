@@ -1570,8 +1570,8 @@ input:focus {
 .gallery-image-wrapper {
     position: relative;
     overflow: hidden;
-    border-radius: 18px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     background: white;
     aspect-ratio: 1;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -1780,8 +1780,8 @@ input:focus {
 /* Responsive Gallery */
 @media (max-width: 768px) {
     .gallery-item {
-        flex: 0 0 200px;
-        min-width: 200px;
+        flex: 0 0 150px;
+        min-width: 150px;
     }
 
     .lightbox-prev,
@@ -1810,12 +1810,12 @@ input:focus {
 
 @media (max-width: 480px) {
     .gallery-item {
-        flex: 0 0 150px;
-        min-width: 150px;
+        flex: 0 0 120px;
+        min-width: 120px;
     }
 
     .gallery-grid {
-        gap: 15px;
+        gap: 12px;
         padding-left: 10px;
         padding-right: 10px;
     }
