@@ -1,2 +1,2 @@
 ik heb vooral GithubAI gebruikt
-voor foto's :
+voor foto's : unplash,pixabay voor de mindmap van x factor
